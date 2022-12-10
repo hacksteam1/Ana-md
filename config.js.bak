@@ -1,0 +1,55 @@
+const fs = require('fs')
+const chalk = require('chalk')
+//*╔═══❖•ೋ° °ೋ•❖═══╗*
+//    DEFINIÇÕES  DS NUMEROS E NOMES
+//*╚═══❖•ೋ° °ೋ•❖═══╝*
+global.V = ['4.0']//<--versão do bot
+//-------------------------------------
+global.bot = ['Doctor']//<--nome do bot
+//-------------------------------------
+global.name = ['zalts']//<--nome do dono
+//-------------------------------------
+global.nami = ['zaltizinho']//<--nome fofo do dono
+//-------------------------------------
+global.prefa = ['','!','.','×','/','?']//<--prefix
+//-------------------------------------
+global.owner = ['351933471425']//<--numedo do dono
+//-------------------------------------
+global.sessionName = 'Qrcode'//<--nome da sessão
+//-------------------------------------
+//-------------------------------------
+//-------------------------------------
+//*╔═══❖•ೋ° °ೋ•❖═══╗*
+//           NOME DAS FIG
+//*╚═══❖•ೋ° °ೋ•❖═══╝*
+global.author = '@zalts'
+//-------------------------------------
+global.packname = `doctor domina`
+//-------------------------------------
+//-------------------------------------
+//-------------------------------------
+global.apidados = 'https://apitestekarma.herokuapp.com'; // Compre sua api com o markos: wa.me/559491423691
+global.apiToken = 'coloque sua api aqui'; // Compre seu token com o markos: wa.me/559491423691
+global.sp = '⭔'
+//*╔═══❖•ೋ° °ೋ•❖═══╗*
+//            PALAVRAS E FALAS
+//*╚═══❖•ೋ° °ೋ•❖═══╝*
+global.mess = {
+    success: '✓ Success',
+    admin: 'n',
+    botAdmin: 'n',
+    owner: 'n',
+    group: 'n',
+    private: 'n',
+    bot: 'n',
+    wait: 'Aguarde...',
+}
+global.thumb = fs.readFileSync('./lib/doctor.jpg')
+let file = require.resolve(__filename)
+fs.watchFile(file, () => {
+	fs.unwatchFile(file) 
+	console.log(chalk.yellowBright(`┌────────────────────────────────────────────────❮●
+└atualizou'${__filename}' com sucesso`))
+	delete require.cache[file]
+	require(file)
+})
